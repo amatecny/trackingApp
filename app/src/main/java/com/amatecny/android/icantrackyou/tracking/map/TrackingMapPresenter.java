@@ -149,7 +149,7 @@ class TrackingMapPresenter extends BaseMvpPresenter<TrackingMapContract.View> im
         //check if there are any already tracked locations
         //here it starts to be interesting as we need to wait for the map to be prepared for any ops, therefore go async
         Observable.just( trackedLocations )
-                .delay( 1, TimeUnit.SECONDS )//hmm, i'd use countdonwlatch,but it is not a friend with tests
+                .delay( 1, TimeUnit.SECONDS )//hmm, i'd use countdownlatch,but it is not a friend with tests
                 .observeOn( AndroidSchedulers.mainThread() )
                 .doOnNext( locations -> view.clearMarkersAndPath() )//ultimately, clear any drawings from the previous occasions
                 .doOnNext( locations -> {
