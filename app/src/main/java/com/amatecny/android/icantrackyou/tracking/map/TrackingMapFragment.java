@@ -253,7 +253,7 @@ public class TrackingMapFragment extends MvpMapFragment<TrackingMapContract.Pres
     public void onRequestPermissionsResult( int requestCode, @NonNull String permissions[], @NonNull int[] grantResults ) {
         switch ( requestCode ) {
             case LOCATION_PERMISSION_REQUEST_CODE: {
-                // If request is cancelled, the result arrays are empty. But for this app, we'd like to have both permissions
+                // If request is cancelled, the result arrays are empty.
                 if ( grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED ) {
                     presenter.locationPermissionGranted();
                 } else {
