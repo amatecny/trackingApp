@@ -197,9 +197,9 @@ class TrackingMapPresenter extends BaseMvpPresenter<TrackingMapContract.View> im
         //noinspection MissingPermission - permissions are already checked, outside of this method
         rxLocation.location().updates( locationRequest )
                 .doOnNext( location -> {
-                    displayMarker( location, trackedLocations.size() );
+                    displayMarker( location, trackedLocations.size() );//just display it immediately, position would be at the end of the list
                     animateCamera( location );
-                } )//just display it immediately, position would be at the end of the list
+                } )
                 .compose( storeDisposable() )
                 .subscribe( newestLocation -> {
                     //grab the last position and designate a path to current position
