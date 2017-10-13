@@ -24,6 +24,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.TimeZone;
+import java.util.concurrent.TimeUnit;
 
 import hu.akarnokd.rxjava2.math.MathObservable;
 import io.reactivex.Observable;
@@ -148,12 +149,13 @@ class TrackingMapPresenter extends BaseMvpPresenter<TrackingMapContract.View> im
         //check if there are any already tracked locations
         //here it starts to be interesting as we need to wait for the map to be prepared for any ops, therefore go async
         Observable.just( trackedLocations )
-                .filter( trackedLocations -> !trackedLocations.isEmpty() )
+                .delay( 1, TimeUnit.SECONDS )//hmm, i'd use countdonwlatch,but it is not a friend with tests
+                .observeOn( AndroidSchedulers.mainThread() )
                 .doOnNext( locations -> view.clearMarkersAndPath() )//ultimately, clear any drawings from the previous occasions
                 .doOnNext( locations -> {
                     for ( int i = 0; i < locations.size(); i++ ) {
                         Location locationAtIndex = locations.get( i );
-                        displayMarker( locationAtIndex, trackedLocations.size() );//display markers immediately
+                        displayMarker( locationAtIndex, i );//display markers immediately
 
                         //also move the camera to the last position
                         if ( i == locations.size() - 1 ) {

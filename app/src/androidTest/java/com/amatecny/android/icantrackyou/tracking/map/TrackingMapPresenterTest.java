@@ -445,7 +445,7 @@ public class TrackingMapPresenterTest {
         InstrumentationRegistry.getInstrumentation().waitForIdleSync();
 
 
-        //other callbacks to view are covered by other test, as the same function is doing them, just chceck if that function got correct data
+        //other callbacks to view are covered by other test, as the same function is doing them, just check if that function got correct data
         ArgumentCaptor<CameraPosition> cameraPositionCaptor = ArgumentCaptor.forClass( CameraPosition.class );
         verify( mockView ).updateCamera( cameraPositionCaptor.capture() );
 
