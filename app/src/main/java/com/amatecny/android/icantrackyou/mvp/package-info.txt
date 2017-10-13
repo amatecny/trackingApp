@@ -1,0 +1,3 @@
+*this is a subset of functionality of a framework developed for one of my earlier projects,
+it is not ready to be publicly published, as it is still being developed, sort of
+* tests are not added to this project for simplicity

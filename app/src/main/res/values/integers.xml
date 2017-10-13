@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="integer_default_location_tracking_interval">10</integer>
+    <integer name="integer_default_path_width">12</integer>
+</resources>

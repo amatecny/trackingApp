@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimaryDarkTransparent">#66303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!-- custom colors -->
+    <color name="colorBottomSheetTitle">#8A000000</color>
+    <color name="colorBottomSheetText">#DE000000</color>
+    <color name="defaultColorPath">#FF007F</color>
+
+    <!-- marker accuracy-->
+    <color name="colorMarkerAccuracyStroke">@color/colorPrimaryDark</color>
+    <color name="colorMarkerAccuracySolid">@color/colorPrimaryDarkTransparent</color>
+
+    <!-- extreme points control-->
+    <color name="colorExtremePointsStroke">#666666</color>
+    <color name="colorExtremePointsSolid">#bfbfbf</color>
+
+</resources>

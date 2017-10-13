@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">Tracky app</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+    <string name="accuracy">Accuracy</string>
+    <string name="time">Time</string>
+    <string name="source">Source</string>
+    <string name="address">Address</string>
+    <string name="address_on_display">%1$s, %2$s</string>
+    <string name="accuracy_in_meters">%.2f m</string>
+
+    <!-- menu -->
+    <string name="settings">Settings</string>
+    <string name="north">N</string>
+    <string name="east">E</string>
+    <string name="west">W</string>
+    <string name="south">S</string>
+
+
+    <!-- preferences-->
+    <string name="location_interval_pref_key">location_interval_preference</string>
+    <string name="path_color_pref_key">path_color_preference</string>
+    <string name="path_width_pref_key">path_stroke_width</string>
+
+    <string name="settings_location_title">Location</string>
+    <string name="settings_path_title">Path</string>
+
+    <string name="settings_interval_title">Interval</string>
+    <string name="settings_interval_summary">Amount of seconds between location requests</string>
+    <string name="settings_interval_dialog_title">Please choose the location interval</string>
+
+    <string name="settings_color_title">Color</string>
+    <string name="settings_color_dialog_title">Choose the path color</string>
+
+    <string name="settings_width_title">Width</string>
+    <string name="settings_width_dialog_title">Choose the width of the path</string>
+
+    <!-- color picker -->
+    <string name="bright_pink">Bright Pink</string>
+    <string name="red">Red</string>
+    <string name="orange">Orange</string>
+    <string name="yellow">Yellow</string>
+    <string name="green">Green</string>
+    <string name="spring_green">Spring Green</string>
+    <string name="cyan">Cyan</string>
+    <string name="azure">Azure</string>
+    <string name="blue">Blue</string>
+    <string name="violet">Violet</string>
+    <string name="magenta">Magenta</string>
+
+</resources>

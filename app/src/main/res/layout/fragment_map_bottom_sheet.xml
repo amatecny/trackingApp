@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/bottom_sheet_layout"
+    style="@style/bottom_sheet_layout_style"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="274dp"
+    android:elevation="4dp"
+    android:orientation="vertical"
+    app:behavior_hideable="true"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+
+    <TextView
+        android:id="@+id/address_value"
+        style="@style/bottom_sheet_regular_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="1 Time square, NY"/>
+
+    <View
+        android:id="@+id/address_value_separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/address_value"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorPrimary"/>
+
+    <!-- put it in linear layout for alignment purposes-->
+    <LinearLayout
+        android:id="@+id/bottom_sheet_title_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/address_value_separator"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/coordinates_label"
+            style="@style/bottom_sheet_title_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/latitude"/>
+
+        <TextView
+            android:id="@+id/longitude_label"
+            style="@style/bottom_sheet_title_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/longitude"/>
+
+        <TextView
+            android:id="@+id/accuracy_label"
+            style="@style/bottom_sheet_title_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/accuracy"/>
+
+        <TextView
+            android:id="@+id/time_label"
+            style="@style/bottom_sheet_title_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/time"/>
+
+        <TextView
+            android:id="@+id/source_label"
+            style="@style/bottom_sheet_title_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/source"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/address_value_separator"
+        android:layout_toEndOf="@id/bottom_sheet_title_layout"
+        android:layout_toRightOf="@id/bottom_sheet_title_layout"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/latitude_value"
+            style="@style/bottom_sheet_regular_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="66° 34′ N"/>
+
+        <TextView
+            android:id="@+id/longitude_value"
+            style="@style/bottom_sheet_regular_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="23° 34′ W"/>
+
+        <TextView
+            android:id="@+id/accuracy_value"
+            style="@style/bottom_sheet_regular_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="25m"/>
+
+        <TextView
+            android:id="@+id/time_value"
+            style="@style/bottom_sheet_regular_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            tools:text="Oct 11, 2017"/>
+
+        <TextView
+            android:id="@+id/source_value"
+            style="@style/bottom_sheet_regular_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="GPS"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

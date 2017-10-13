@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="@string/settings_location_title">
+
+        <EditTextPreference
+            android:key="@string/location_interval_pref_key"
+            android:title="@string/settings_interval_title"
+            android:summary="@string/settings_interval_summary"
+            android:defaultValue="@integer/integer_default_location_tracking_interval"
+            android:dialogTitle="@string/settings_interval_dialog_title"
+            android:numeric="integer"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/settings_path_title">
+
+        <ListPreference
+            android:key="@string/path_color_pref_key"
+            android:title="@string/settings_color_title"
+            android:dialogTitle="@string/settings_color_dialog_title"
+            android:entries="@array/stringArrayPathColor"
+            android:defaultValue="@string/bright_pink"
+            android:entryValues="@array/colorArrayPath" />
+
+        <EditTextPreference
+            android:key="@string/path_width_pref_key"
+            android:title="@string/settings_width_title"
+            android:defaultValue="@integer/integer_default_path_width"
+            android:dialogTitle="@string/settings_width_dialog_title"
+            android:numeric="integer"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

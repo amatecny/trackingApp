@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+    Note: This resource is used for the debug build target. There is no point for adding a release key,
+    as it would be necessary to provide a kaystore as well
+
+    in truly production, this would go to debug build and a release verions would be added as well
+    -->
+    <string name="google_maps_key" translatable="false" templateMergeStrategy="preserve">
+        AIzaSyD_3IsJv-hnlnJSMeytUkDfcNOjMnEWWRk
+    </string>
+</resources>
