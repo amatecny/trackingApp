@@ -287,7 +287,7 @@ public class TrackingMapPresenterTest {
         when( this.mockLocation.geocoding() ).thenReturn( mockGeo );
 
 
-        double testLatitude = 90.0;
+        double testLatitude = 80.0;
         double testLongitude = 50.0;
 
         Location northern = mock( Location.class );
@@ -296,7 +296,7 @@ public class TrackingMapPresenterTest {
         when( northern.hasBearing() ).thenReturn( false );
 
         Location southern = mock( Location.class );
-        when( southern.getLatitude() ).thenReturn( 91.0 );
+        when( southern.getLatitude() ).thenReturn( 79.0 );//can't be more than 90,
         uut.trackedLocations.add( northern );
         uut.trackedLocations.add( southern );
 
@@ -410,7 +410,7 @@ public class TrackingMapPresenterTest {
         InstrumentationRegistry.getInstrumentation().waitForIdleSync();
 
 
-        //other callbacks to view are covered by other test, as the same function is doing them, just chceck if that function produced correct data
+        //other callbacks to view are covered by other test, as the same function is doing them, just chceck if that function got correct data
         ArgumentCaptor<CameraPosition> cameraPositionCaptor = ArgumentCaptor.forClass( CameraPosition.class );
         verify( mockView ).updateCamera( cameraPositionCaptor.capture() );
 
@@ -445,7 +445,7 @@ public class TrackingMapPresenterTest {
         InstrumentationRegistry.getInstrumentation().waitForIdleSync();
 
 
-        //other callbacks to view are covered by other test, as the same function is doing them, just check if that function produced correct data
+        //other callbacks to view are covered by other test, as the same function is doing them, just check if that function got correct data
         ArgumentCaptor<CameraPosition> cameraPositionCaptor = ArgumentCaptor.forClass( CameraPosition.class );
         verify( mockView ).updateCamera( cameraPositionCaptor.capture() );
 
