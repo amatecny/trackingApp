@@ -123,7 +123,7 @@ class TrackingMapPresenter extends BaseMvpPresenter<TrackingMapContract.View> im
     @Override
     public void westernmostPointLocationRequested() {
         MathObservable.min( Observable.fromIterable( trackedLocations ),
-                ( o1, o2 ) -> Double.compare( o1.getLongitude(), o2.getLongitude() ) )//this will not work globally...
+                ( o1, o2 ) -> Double.compare( o1.getLongitude(), o2.getLongitude() ) )
                 .subscribeOn( Schedulers.computation() )
                 .observeOn( AndroidSchedulers.mainThread() )
                 .compose( storeDisposable() )
@@ -133,7 +133,7 @@ class TrackingMapPresenter extends BaseMvpPresenter<TrackingMapContract.View> im
     @Override
     public void easternmostPointLocationRequested() {
         MathObservable.max( Observable.fromIterable( trackedLocations ),
-                ( o1, o2 ) -> Double.compare( o1.getLongitude(), o2.getLongitude() ) )//this will not work globally...
+                ( o1, o2 ) -> Double.compare( o1.getLongitude(), o2.getLongitude() ) )
                 .subscribeOn( Schedulers.computation() )
                 .observeOn( AndroidSchedulers.mainThread() )
                 .compose( storeDisposable() )
